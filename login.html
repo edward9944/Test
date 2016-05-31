@@ -1,0 +1,44 @@
+{% load staticfiles %}
+<html>
+	<head>
+		<title>Please login</title>
+			{% block styling %}
+			<link rel="stylesheet" href="{% static 'bootstrap-3.3.6-dist\css\bootstrap.min.css' %}">
+		{% endblock styling %}
+		<style type="text/css"> 
+
+			ul
+			{ 
+			overflow-x:hidden;
+			white-space:nowrap; 
+			height: 1em;
+			width: 100%;
+			margin: 0 10px 10px 0;
+			display:inline;
+			padding: 0 10px 0 20px;
+			} 
+
+			li
+			{ 
+			display:inline; 
+			margin: 0 5px 0 0;
+			}       
+		</style>
+	</head>
+	<body>
+		<h1>Login Pageeeee </h1>
+		<ul>
+			<li><label for="usermail">Email</label>
+			<input type="email" name="usermail" placeholder="yourname@email.com" required></li>
+			<li><label for="password">Password</label>
+			<input type="password" name="password" placeholder="password" required></li>
+			<li>
+			<input type="submit" value="Login"></li>
+		</ul>
+		{% block javascript %}
+			<script src="{% static 'jquery-2.2.4.min.js' %}"></script>
+			<script src="{% static 'bootstrap-3.3.6-dist\js\bootstrap.min.js' %}"></script>
+			<script src="{% static 'jquery-2.2.4.min.js' %}"></script>
+		{% endblock javascript %}
+	</body>
+</html>
